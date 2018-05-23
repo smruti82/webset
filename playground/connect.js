@@ -23,16 +23,16 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp',(err, client)=>{
 	// 	}
 	// 	console.log(JSON.stringify(result.ops,undefined,2))
 	// });
-   // db.collection('Users').insertOne({
-   // 	name:'smruti',
-   // 	age:'22',
+   db.collection('Users').insertOne({
+   	name:'smruti',
+   	age:22,
     
-   // },(err,result)=>{
-   // 	if(err){
-   // 		return console.log('unable',err);
-   // 	}
-   // 	console.log(result.ops);
-   // });
+   },(err,result)=>{
+   	if(err){
+   		return console.log('unable',err);
+   	}
+   	console.log(result.ops);
+   });
 
 	client.close();
 }); 
